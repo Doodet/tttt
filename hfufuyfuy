@@ -1,0 +1,50 @@
+def menghitung_kecepatan(s, t):
+    V = s * t
+    """menghitung Kecepatan"""
+    return V
+
+
+def menghitung_waktu(V, t):
+    s = V / t
+    """menghitung waktu"""
+    return s
+
+
+def menghitung_jarak(V, s):
+    t = V / s
+    """menghitung Jarak"""
+    return t
+
+
+
+def menu():
+    print("program untuk menghitung hukum hooke:")
+    print("1. Hitung Kecepatan (V = s * t)")
+    print("2. Hitung Waktu (s = V / t)")
+    print("3. Hitung Jarak (t = V / s)")
+    
+    pilihan = input("Masukkan pilihan (1/2/3): ")
+
+    if pilihan == '1':
+        s = float(input("masukan jarak yang akan ditempuh dalam m:  "))
+        t = float(input("masukan waktu yang akan di tempuh dalam s: "))
+        V = menghitung_kecepatan(s, t)
+        print(F"Kecepatannya adalah: {V} m/s")
+    
+    elif pilihan == '2':
+        V = float(input("masukan nilai kecepatannya dalam m/s: "))
+        t = float(input("masukan waktu yang akan di tempuh dalam s: "))
+        s = menghitung_waktu(V, t)
+        print(F"Waktu yang di tempuh adalah: {s} s")
+
+    elif pilihan == '3':
+        V = float(input("masukan nilai kecepatannya dalam m/s: "))
+        s = float(input("masukan jarak yang akan ditempuh dalam m: "))
+        t = menghitung_jarak(V, s)
+        print(F"Jarak yang di tempuh adalah: {t} m")
+
+    else:
+        print("pilihan tidak sesuai, silahkan pilih 1/2/3")
+
+if __name__ == "__main__":
+    menu()
